@@ -1,0 +1,217 @@
+/** Elements **/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
+}
+
+body {
+  color: #8b8f93;
+  margin: 0;
+  border: 0;
+}
+
+main {
+  margin: 15px;
+}
+
+header {
+  background: #4d5d6e;
+  background-size: cover;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1px;
+  font-size: 17px;
+  font-weight: bold;
+  max-height: 4em;
+}
+
+form {
+  text-align: left;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  color: #797D7F;
+}
+
+input,
+select {
+  margin-top: 8px;
+  margin-bottom: 1em;
+}
+
+input[type="radio"]{
+  display: inline-block;
+}
+
+input,
+textarea,
+select {
+  transition: background-color 1s ease-in-out;
+}
+
+textarea {
+  height: 7em;
+  margin-top: .7em;
+}
+
+button {
+  color: white;
+  margin: 1.5em 0;
+  font-size: 19px;
+  cursor:pointer;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #4DBFB6;
+  border: none;
+  border-radius: .3em;
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2%;
+}
+
+
+/** Classes **/
+
+.intro {
+  border-bottom: solid black 3px;
+  padding-bottom: 1.2em;
+}
+
+.intro {
+  text-align: center;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+::placeholder{
+  color: #BDC3C7;
+}
+
+.form-section,
+.newsletter-section {
+  border-top: solid black 1.5px;
+  margin-top: 2px;
+}
+
+
+/** Elements and Classes combined **/
+
+.intro p {
+  margin-top: 0;
+}
+
+.intro h3 {
+  font-weight: bolder;
+  display: block;
+  margin-top: 4%;
+  font-size: 20px;
+  color: #4d5d6e;
+  margin-bottom: 0em;
+}
+
+.intro h3,
+legend.section-heading{
+    width: 100%;
+}
+
+.form-section input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #D7DBD6;
+  border: none;
+  border-radius: .3em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #FCF3CF;
+}
+
+legend.section-heading {
+  text-align: left;
+  color: #4d5d6e;
+  background-color: #d0daff;
+  font-size: 19px;
+  font-weight: bolder;
+  display: block;
+  margin-right: 0;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  border-radius: 0 0 .3em .3em;
+}
+
+/** IDs **/
+
+#zip {
+  margin-bottom: 2em;
+  width: 50%;
+}
+
+#name::placeholder,
+#email::placeholder {
+  text-align: right;
+  font-style: italic;
+}
+
+
+/** Media Query **/
+
+@media (min-width: 768px) {
+
+  main,
+  footer {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  .form-section input,
+  .form-section select {
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+  .form-section label {
+    display: inline-flex;
+    width: 29%;
+  }
+
+  #zip {
+    width: 20%;
+  }
+
+  footer {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2%;
+  }
+
+  .intro h3 {
+    margin-top: 1.5em;
+  }
+
+  .section-heading {
+    padding-top: 1.5em;
+    margin-bottom: 0;
+  }
+} /** Media Query close **/
