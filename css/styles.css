@@ -35,7 +35,9 @@ fieldset {
   border: none;
   padding: 0;
   margin: 0;
+  margin-top: 2px;
 }
+
 
 input,
 textarea,
@@ -66,7 +68,7 @@ textarea {
 
 button {
   color: white;
-  margin: 1.5em 0;
+  margin: 1.5em 0 .7em 0;
   font-size: 19px;
   cursor:pointer;
   display: block;
@@ -80,14 +82,14 @@ button {
 footer {
   text-align: center;
   font-style: italic;
-  margin-bottom: 2%;
+  margin-bottom: .5em;
 }
 
 
 /** Classes **/
 
 .intro {
-  border-bottom: solid black 3px;
+  border-bottom: solid black 3.5px;
   padding-bottom: 1.2em;
 }
 
@@ -95,18 +97,8 @@ footer {
   text-align: center;
 }
 
-.contact-info {
-  text-align: left;
-}
-
 ::placeholder{
   color: #BDC3C7;
-}
-
-.form-section,
-.newsletter-section {
-  border-top: solid black 1.5px;
-  margin-top: 2px;
 }
 
 
@@ -119,18 +111,18 @@ footer {
 .intro h3 {
   font-weight: bolder;
   display: block;
-  margin-top: 4%;
   font-size: 20px;
   color: #4d5d6e;
+  margin-top: 1em;
   margin-bottom: 0em;
 }
 
 .intro h3,
-legend.section-heading{
-    width: 100%;
+fieldset .section-title {
+  width: 100%;
 }
 
-.form-section input,
+.contact-section input,
 textarea,
 select {
   display: block;
@@ -141,13 +133,19 @@ select {
   border-radius: .3em;
 }
 
+.block input,
+.block label {
+  display: inline;
+  margin-bottom: 0;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
   background-color: #FCF3CF;
 }
 
-legend.section-heading {
+fieldset .section-title {
   text-align: left;
   color: #4d5d6e;
   background-color: #d0daff;
@@ -157,8 +155,10 @@ legend.section-heading {
   margin-right: 0;
   margin-bottom: 1em;
   padding-top: 1em;
+  border-top: solid black 1.5px;
   border-radius: 0 0 .3em .3em;
 }
+
 
 /** IDs **/
 
@@ -173,6 +173,11 @@ legend.section-heading {
   font-style: italic;
 }
 
+#javascript-news,
+#plain-text {
+  margin-bottom: 2em;
+}
+
 
 /** Media Query **/
 
@@ -184,14 +189,26 @@ legend.section-heading {
     margin: auto;
   }
 
-  .form-section input,
-  .form-section select {
+  fieldset .section-title {
+    padding-top: 2em;
+  }
+
+  .intro h3 {
+    margin-top: 2em;
+  }
+
+  button {
+    margin-bottom: 2em;
+  }
+
+  .contact-section input,
+  .contact-section select {
     display: inline-block;
     width: 70%;
     margin-bottom: 10px;
   }
 
-  .form-section label {
+  .contact-section label {
     display: inline-flex;
     width: 29%;
   }
@@ -203,15 +220,7 @@ legend.section-heading {
   footer {
     text-align: center;
     font-style: italic;
-    margin-bottom: 2%;
+    margin-bottom: 1em;
   }
 
-  .intro h3 {
-    margin-top: 1.5em;
-  }
-
-  .section-heading {
-    padding-top: 1.5em;
-    margin-bottom: 0;
-  }
 } /** Media Query close **/
